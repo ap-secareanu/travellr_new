@@ -10,16 +10,16 @@ public class VisitedCountry {
   @GeneratedValue
   private Integer id;
 
-  private String country_code;
-  private String country_name;
-  private String visited_by;
+  private String countryCode;
+  private String countryName;
+  private String visitedBy;
 
   private VisitedCountry() {};
 
-  public VisitedCountry(String country_code, String visited_by, String country_name) {
-    this.country_code = country_code;
-    this.country_name = country_name;
-    this.visited_by = visited_by;
+  public VisitedCountry(String countryCode, String visitedBy, String countryName) {
+    this.countryCode = countryCode;
+    this.countryName = countryName;
+    this.visitedBy = visitedBy;
   }
 
   public Integer getId() {
@@ -27,14 +27,14 @@ public class VisitedCountry {
   }
 
   public String getCountryCode() {
-    return this.country_code;
+    return this.countryCode;
   }
 
   public String getCountryName() {
-    return this.country_name;
+    return this.countryName;
   }
 
   public String getVisitedBy() {
-    return this.visited_by;
+    return this.visitedBy;
   }
 }

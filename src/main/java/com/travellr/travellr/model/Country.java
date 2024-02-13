@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 public class Country {
   
   @Id
-  @GeneratedValue
   private Integer id;
 
   private String country_code;
@@ -15,9 +14,14 @@ public class Country {
 
   private Country() {};
   
-  public Country(String country_code, String country_name) {
+  public Country(Integer id, String country_code, String country_name) {
+    this.id = id;
     this.country_code = country_code;
     this.country_name = country_name;
+  }
+
+  public Integer getCountryId() {
+    return this.id;
   }
 
   public String getCountryCode() {
